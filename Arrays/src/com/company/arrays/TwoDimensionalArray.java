@@ -1,7 +1,7 @@
 package com.company.arrays;
 
 public class TwoDimensionalArray {
-    int arr[][] = null;
+    int[][] arr = null;
 
     // constructor
 

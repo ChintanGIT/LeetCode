@@ -35,20 +35,21 @@ public class Main {
 //        System.out.println("");
 //        csll.search(4);
 
-        DSLL dsll = new DSLL();
-        dsll.createDsll(1);
-        dsll.insert(2,1);
-        dsll.insert(3,1);
-        dsll.insert(4,1);
-        dsll.insert(5,1);
-        dsll.insert(6,1);
-        dsll.insert(7,1);
-        dsll.insert(8,1);
-        System.out.println(dsll.head.value);
-        dsll.trav();
+        DLL DLL = new DLL();
+        DLL.createDsll(1);
+        DLL.insert(2,1);
+        DLL.insert(3,1);
+        DLL.insert(4,1);
+        DLL.insert(5,1);
+        DLL.insert(6,1);
+        DLL.insert(7,1);
+        DLL.insert(8,1);
+        System.out.println(DLL.head.value);
+        DLL.trav();
         System.out.println();
-        dsll.search(100);
-
+        DLL.search(100);
+        DLL.deleteEntire();
+        DLL.trav();
    }
 
 }

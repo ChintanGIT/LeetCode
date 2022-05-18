@@ -1,6 +1,6 @@
 package Linked_List;
 
-public class DSLL {
+public class DLL {
     Dnode head;
     Dnode tail;
     int size;
@@ -48,6 +48,10 @@ public class DSLL {
     }
     public void trav(){
         Dnode temp = head;
+        if (head == null){
+            System.out.println("Empty List");
+            return;
+        }
         while(temp != null){
             System.out.print(temp.value + " -> " );
             temp = temp.next;
@@ -70,5 +74,50 @@ public class DSLL {
         }
         System.out.println("value not found in LL");
     }
-
+    public void delete(int location){
+        if ( head == null ){
+            System.out.println("No linked List exists");
+            return;
+        }else if (location == 0){
+            if(size == 1){
+                head = null;
+                tail = null;
+                size--;
+                return;
+            }else{
+                head = head.next;
+                head.prev = null;
+                size--;
+            }
+        }else if (location >= size){
+            Dnode temp = tail.prev;
+            if ( size == 1 ){
+                head = null;
+                tail = null;
+                size--;
+                return;
+            }else{
+                temp.next = null;
+                tail = temp;
+                size--;
+            }
+        }else {
+            Dnode temp = head;
+            for ( int i = 0; i < location-1; i++){
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
+            temp.next.prev = temp;
+            size--;
+        }
+    }
+    public void deleteEntire(){
+        Dnode temp = head;
+        while (temp != null){
+            temp.prev = null;
+            temp = temp.next;
+        }
+        head = null;
+        tail = null;
+    }
 }
