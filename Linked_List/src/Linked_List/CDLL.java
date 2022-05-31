@@ -45,6 +45,37 @@ public class CDLL {
             newNode.next.prev = newNode;
             temp.next = newNode;
         }
+    size++;
+    }
+    public void trav(){
+        Dnode temp = head;
+        while ( temp != null){
+            System.out.print(temp.value + " -> ");
+            temp = temp.next;
+            if (temp == head){
+                System.out.println("tail");
+                return;
+            }
+        }
+    }
+    public void search(int value){
+        Dnode temp = head;
+        int index = 0;
+        while(temp != null){
+            if (temp.value == value){
+                System.out.println( "value found at index " + index);
+                return;
+            }
+            temp = temp.next;
+            index++;
+            if (temp == head){
+                System.out.println("value not found");
+                return;
+            }
+        }
+    }
+    public void delete(int location){
+        
 
     }
 }

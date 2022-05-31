@@ -35,21 +35,34 @@ public class Main {
 //        System.out.println("");
 //        csll.search(4);
 
-        DLL DLL = new DLL();
-        DLL.createDsll(1);
-        DLL.insert(2,1);
-        DLL.insert(3,1);
-        DLL.insert(4,1);
-        DLL.insert(5,1);
-        DLL.insert(6,1);
-        DLL.insert(7,1);
-        DLL.insert(8,1);
-        System.out.println(DLL.head.value);
-        DLL.trav();
-        System.out.println();
-        DLL.search(100);
-        DLL.deleteEntire();
-        DLL.trav();
+//        DLL DLL = new DLL();
+//        DLL.createDsll(1);
+//        DLL.insert(2,1);
+//        DLL.insert(3,1);
+//        DLL.insert(4,1);
+//        DLL.insert(5,1);
+//        DLL.insert(6,1);
+//        DLL.insert(7,1);
+//        DLL.insert(8,1);
+//        System.out.println(DLL.head.value);
+//        DLL.trav();
+//        System.out.println();
+//        DLL.search(100);
+//        DLL.deleteEntire();
+//        DLL.trav();
+
+        CDLL CDLL = new CDLL();
+        CDLL.createCDLL(0);
+        CDLL.insert(1,1);
+        CDLL.insert(1,2);
+        CDLL.insert(1,3);
+        CDLL.insert(1,4);
+        CDLL.insert(1,5);
+        CDLL.insert(1,6);
+        CDLL.insert(1,7);
+        CDLL.insert(1,8);
+        CDLL.trav();
+        CDLL.search(6);
    }
 
 }
